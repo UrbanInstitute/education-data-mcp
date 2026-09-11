@@ -1,0 +1,87 @@
+{
+ "count": 8,
+ "next": null,
+ "previous": null,
+ "results": [
+  {
+   "endpoint_id": 26,
+   "variable": "year",
+   "is_filter": "1",
+   "format": "numeric",
+   "data_type": "integer",
+   "label": "Year",
+   "values": "None",
+   "description": "None"
+  },
+  {
+   "endpoint_id": 26,
+   "variable": "ncessch",
+   "is_filter": "1",
+   "format": "string",
+   "data_type": "string",
+   "label": "School ID",
+   "values": "None",
+   "description": "None"
+  },
+  {
+   "endpoint_id": 26,
+   "variable": "leaid",
+   "is_filter": "1",
+   "format": "string",
+   "data_type": "string",
+   "label": "District ID",
+   "values": "None",
+   "description": "None"
+  },
+  {
+   "endpoint_id": 26,
+   "variable": "fips",
+   "is_filter": "1",
+   "format": "fips",
+   "data_type": "integer",
+   "label": "State FIPS",
+   "values": "None",
+   "description": "None"
+  },
+  {
+   "endpoint_id": 26,
+   "variable": "grade",
+   "is_filter": "1",
+   "format": "grade",
+   "data_type": "integer",
+   "label": "Grade",
+   "values": "None",
+   "description": "None"
+  },
+  {
+   "endpoint_id": 26,
+   "variable": "race",
+   "is_filter": "1",
+   "format": "race",
+   "data_type": "integer",
+   "label": "Race/ethnicity",
+   "values": "None",
+   "description": "None"
+  },
+  {
+   "endpoint_id": 26,
+   "variable": "sex",
+   "is_filter": "1",
+   "format": "sex",
+   "data_type": "integer",
+   "label": "Sex",
+   "values": "None",
+   "description": "None"
+  },
+  {
+   "endpoint_id": 26,
+   "variable": "enrollment",
+   "is_filter": "None",
+   "format": "numeric",
+   "data_type": "integer",
+   "label": "Student enrollment",
+   "values": "None",
+   "description": "None"
+  }
+ ]
+}

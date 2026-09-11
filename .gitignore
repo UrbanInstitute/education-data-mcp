@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# NOTE: .python-version is deliberately TRACKED. It is what keeps the local
+# interpreter, CI and the container image on one version; ignoring it lets uv
+# resolve a different Python in each place, all satisfying requires-python.
+
+# Testing
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Claude Code
+.claude/settings.local.json
+
+# macOS
+.DS_Store

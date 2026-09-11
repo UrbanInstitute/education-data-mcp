@@ -1,0 +1,61 @@
+[project]
+name = "edp-mcp"
+version = "0.1.0"
+description = "MCP server for the Urban Institute Education Data Portal"
+readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "erika-tyagi", email = "erika.tyagi@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    # 2.0 renamed the high-level server class FastMCP -> MCPServer and raised the
+    # protocol floor to 2026-07-28 (still serving every version back to
+    # 2024-11-05, so older clients negotiate down). The ergonomic API is
+    # otherwise unchanged.
+    #
+    # NOT mcp[cli]: that extra exists for the `mcp dev` inspector command and
+    # drags rich, pygments and cryptography into the runtime image for a tool no
+    # server process ever calls. It lives in the dev group instead.
+    "mcp>=2.0",
+    "httpx>=0.27",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "respx>=0.22",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    # `uv run mcp dev src/edp_mcp/server.py` — the MCP Inspector. Dev-only.
+    "mcp[cli]>=2.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "edp_mcp"
+source-exclude = [".DS_Store"]
+wheel-exclude = [".DS_Store"]
+
+[project.scripts]
+edp-mcp = "edp_mcp.server:main"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+packages = ["edp_mcp"]
+ignore_missing_imports = true

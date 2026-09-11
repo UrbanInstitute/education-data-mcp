@@ -1,0 +1,25 @@
+.git/
+.github/
+.circleci/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+tests/
+scripts/
+
+.claude/
+.mcp.json
+.DS_Store
+Dockerfile
+.dockerignore
+DEPLOY.md
+
+# NOT ignored: README.md. pyproject.toml declares it as the project readme, so
+# the build fails without it.
